@@ -3,19 +3,19 @@ minimal_mistakes_skin: "default"
 
 # Site Settings
 locale: "ko-KR"
-title: "구마의 블로그"
+title: "GUMA"
 title_separator: "-"
-subtitle: "개발 일지"
-name: "구마"
-description: "개발 공부 기록"
+subtitle: ""
+name: "GUMA"
+description: "공부 기록"
 url: "https://johayoung227.github.io"
 baseurl: ""
 repository: "JoHaYoung227/guma.github.io"
 
 # Site Author
 author:
-  name: "구마"
-  bio: "개발자"
+  name: "Guma"
+  bio: "대학원생"
   location: "South Korea"
 
 # Defaults

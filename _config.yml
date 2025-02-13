@@ -1,5 +1,5 @@
-remote_theme: "mmistakes/minimal-mistakes"
-minimal_mistakes_skin: "default"
+remote_theme: cotes2020/jekyll-theme-chirpy
+#minimal_mistakes_skin: "default"
 
 # Site Settings
 locale: "ko-KR"
@@ -40,6 +40,7 @@ paginate_path: /page:num/
 
 # Plugins
 plugins:
+  - jekyll-remote-theme
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist

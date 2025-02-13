@@ -22,3 +22,17 @@ plugins:
   - jekyll-include-cache
   - jekyll-remote-theme
   - jekyll-sitemap  # SEO를 위한 사이트맵 생성
+
+# Defaults
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true

@@ -34,7 +34,6 @@ defaults:
       related: true
 
 # Outputting
-permalink: /:categories/:title/
 paginate: 5
 paginate_path: /page:num/
 

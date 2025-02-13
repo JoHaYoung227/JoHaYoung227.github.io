@@ -2,7 +2,7 @@
 title: "첫 번째 포스트 - 구마의 블로그"
 date: 2024-02-13
 categories: blog
-layout: single
+layout: post
 author_profile: true
 permalink: /:categories/:year/:month/:day/:title/
 ---

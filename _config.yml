@@ -1,8 +1,8 @@
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
-title: "구마의 블로그"  # 원하시는 제목으로 수정
+title: "GUMA"  # 원하시는 제목으로 수정
 locale: "ko-KR"    # 한글 설정
 description: "개발 일지" # 블로그 설명
-baseurl: "/guma.github.io"
+baseurl: ""
 url: "https://johayoung227.github.io"
 
 # SEO 관련 설정
@@ -13,8 +13,12 @@ google_site_verification: # 구글 서치 콘솔 인증 코드 (나중에 추가
 author:
   name: "구마"
   avatar: # 프로필 이미지 경로
-  bio: "블로그 소개글"
+  bio: "I'm interested in Multi-agent Reinforcement Learning."
   location: "South Korea"
+
+# Site Settings
+search: true
+minimal_mistakes_skin: "default"
 
 # 빌드 설정
 plugins:
@@ -36,4 +40,6 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      show_date: true
+      comments: true
+      share: true
+      related: true

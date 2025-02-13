@@ -1,17 +1,24 @@
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
-title: Your Blog Title
-email: your-email@example.com
-description: >- 
-  블로그 설명을 여기에 적어주세요
+title: "구마의 블로그"  # 원하시는 제목으로 수정
+locale: "ko-KR"    # 한글 설정
+description: "개발 일지" # 블로그 설명
 baseurl: "/guma.github.io"
 url: "https://johayoung227.github.io"
-github_username: JoHaYoung227
 
-# Build settings
+# SEO 관련 설정
+search: true  # 검색 기능 활성화
+google_site_verification: # 구글 서치 콘솔 인증 코드 (나중에 추가)
+
+# 사이트 저자 설정
+author:
+  name: "구마"
+  avatar: # 프로필 이미지 경로
+  bio: "블로그 소개글"
+  location: "South Korea"
+
+# 빌드 설정
 plugins:
   - jekyll-feed
   - jekyll-include-cache
   - jekyll-remote-theme
-
-# Theme settings
-minimal_mistakes_skin: "default"
+  - jekyll-sitemap  # SEO를 위한 사이트맵 생성

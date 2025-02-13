@@ -23,6 +23,9 @@ plugins:
   - jekyll-remote-theme
   - jekyll-sitemap  # SEO를 위한 사이트맵 생성
 
+# Permalinks
+permalink: /:categories/:year/:month/:day/:title/
+
 # Defaults
 defaults:
   # _posts
@@ -33,6 +36,4 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: true
-      share: true
-      related: true
+      show_date: true

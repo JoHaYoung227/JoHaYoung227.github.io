@@ -1,5 +1,5 @@
-remote_theme: cotes2020/jekyll-theme-chirpy
-#minimal_mistakes_skin: "default"
+remote_theme: "mmistakes/minimal-mistakes"
+minimal_mistakes_skin: "default"
 
 # Site Settings
 locale: "ko-KR"
@@ -27,13 +27,14 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: false
+      read_time: true
       show_date: true
       comments: true
       share: true
       related: true
 
 # Outputting
+permalink: /:categories/:title/
 paginate: 5
 paginate_path: /page:num/
 

@@ -13,6 +13,8 @@ baseurl: ""
 repository: "JoHaYoung227/guma.github.io"
 markdown: kramdown
 mathjax: true
+# Custom CSS 적용
+include: ["_pages"]
 
 # Site Author
 author:

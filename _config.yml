@@ -12,8 +12,7 @@ url: "https://johayoung227.github.io"
 baseurl: ""
 repository: "JoHaYoung227/guma.github.io"
 markdown: kramdown
-kramdown:
-  math_engine: mathjax
+mathjax: true
 
 # Site Author
 author:

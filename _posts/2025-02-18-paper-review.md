@@ -13,7 +13,6 @@ use_math: true
 date: 2025-02-18
 last_modified_at: 2025-02-18
 ---
-# [논문 리뷰] Rethinking Exploration and Experience Exploitation in Value-Based MARL
 
 ## 논문 기본 정보
 | 항목 | 내용 |
@@ -108,6 +107,7 @@ $εt = tanh(α * √log(|Ut|))$
   - 에피소드 단위가 아닌 transition 단위로 관리 
 
 > 알고리즘 2
+
 ```
 입력: transitions 리스트 D, sequence 크기 m, batch 크기 B
 출력: transitions batch B
@@ -122,6 +122,7 @@ $εt = tanh(α * √log(|Ut|))$
 
     - 생성된 sequence를 batch B에 추가
 ```
+
 * 알고리즘 2의 핵심 기능
   - 균일한 길이의 sequence 생성
   - buffer 경계를 넘어가는 상황 처리

@@ -6,11 +6,14 @@ locale: "ko-KR"
 title: "GUMA"
 title_separator: "-"
 subtitle: ""
-name: "ㅈㅎㅇ"
+name: ""
 description: ""
 url: "https://johayoung227.github.io"
 baseurl: ""
 repository: "JoHaYoung227/guma.github.io"
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
 
 # Site Author
 author:

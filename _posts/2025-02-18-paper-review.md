@@ -46,10 +46,10 @@ last_modified_at: 2025-02-18
 * 입실론-greedy policy 수정으로 SOTA MARL 성능 달성
 * 에이전트 수에 따른 가용 joint actions 비율 고려
 
-![Exploration 전략 개선](../assets/images/2025-02-18-paper-review/image2.png)
+![Exploration 전략 개선](https://johayoung227.github.io/assets/images/2025-02-18-paper-review/image2.png)
 
 * 수식 <br>
-$εt = tanh(α * √log(|Ut|))$
+$$εt = tanh(α * √log(|Ut|))$$
   - |Ut|: 시점 t에서 사용 가능한 joint actions의 수
 1. log(|Ut|)
     - joint actions 수가 증가할 때 완만하게 증가
@@ -63,7 +63,6 @@ $εt = tanh(α * √log(|Ut|))$
 > Replay Buffer의 주요 구조와 특징
 * Replay Buffer란?
     - 강화학습에서 경험을 저장하고 재사용하기 위한 메모리 공간
-    - transition tuples $(s_t, r_t, {(z_t^a, u_t^a, z_{t+1}^a) | a=1,...,n})$ 저장
     - 버퍼 크기 D만큼의 transitions 저장 가능
 
 > 기존 방식의 문제점
@@ -89,18 +88,19 @@ $εt = tanh(α * √log(|Ut|))$
 
 ![Replay Buffer 개선 구조](https://johayoung227.github.io/assets/images/2025-02-18-paper-review/image1.png)
 
+![알고리즘](https://johayoung227.github.io/assets/images/2025-02-18-paper-review/image3.png)
 > 알고리즘 1
-```
+```pseudo 
 입력: transitions 리스트 D, buffer 크기 D
 출력: 업데이트된 transitions 리스트 D
 
 1. 길이 T의 새로운 에피소드에서 transition tuples 샘플링
 2. 각 step t에 대해:
 
-    - buffer가 가득 찼다면 (size(D) = D):
-        - 가장 오래된 transition 제거
+    buffer가 가득 찼다면 (size(D) = D):
+        가장 오래된 transition 제거
 
-`   - 새로운 transition을 buffer에 추가
+    새로운 transition을 buffer에 추가
 ```
 * 알고리즘 1의 특징
   - FIFO(First In First Out) 방식으로 메모리 관리
@@ -109,19 +109,19 @@ $εt = tanh(α * √log(|Ut|))$
 
 > 알고리즘 2
 
-```
+```pseudo
 입력: transitions 리스트 D, sequence 크기 m, batch 크기 B
 출력: transitions batch B
 
 1. 빈 batch B 초기화
 2. batch 크기 B가 될 때까지:
 
-    - 무작위로 시작 인덱스 i 선택
-    - sequence 생성:
-        - i부터 i+m까지의 transitions 선택
-        - buffer 끝에 도달하면 처음부터 이어서 선택
+    무작위로 시작 인덱스 i 선택
+    sequence 생성:
+        i부터 i+m까지의 transitions 선택
+        buffer 끝에 도달하면 처음부터 이어서 선택
 
-    - 생성된 sequence를 batch B에 추가
+    생성된 sequence를 batch B에 추가
 ```
 
 * 알고리즘 2의 핵심 기능

@@ -1,10 +1,17 @@
 ---
-layout: post
 title: "[논문 리뷰] Rethinking Exploration and Experience Exploitation in Value-Based MARL"
+excerpt: "QMIX 기반 MARL의 exploration과 experience replay 전략 개선"
+categories:
+  - Paper Review
+tags:
+  - MARL
+  - Reinforcement Learning
+  - QMIX
+toc: true
+toc_sticky: true
+use_math: true
 date: 2025-02-18
-categories: [Paper Review, MARL]
-author_profile: true
-permalink: /:categories/:year/:month/:day/:title/
+last_modified_at: 2025-02-18
 ---
 # [논문 리뷰] Rethinking Exploration and Experience Exploitation in Value-Based MARL
 

@@ -12,7 +12,6 @@ toc_sticky: true
 use_math: true
 date: 2025-02-18
 last_modified_at: 2025-02-18
-layout: post
 mathjax: true
 ---
 

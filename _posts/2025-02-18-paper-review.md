@@ -32,6 +32,7 @@ last_modified_at: 2025-02-18
 #### 1. Exploration 전략 개선
 
 > 기존 입실론-greedy의 한계
+
 * 고정된 입실론 값 사용
   - 환경과 상태에 관계없이 동일한 확률로 랜덤 행동 선택
   - 환경의 복잡도나 에이전트 수를 고려하지 않음
@@ -42,15 +43,18 @@ last_modified_at: 2025-02-18
   - 복잡한 협력이 필요한 상황에서 충분한 탐색이 어려움
 
 > 제안하는 개선 방법 
+
 * available joint actions의 수에 기반한 exploration 방법 제안
 * 입실론-greedy policy 수정으로 SOTA MARL 성능 달성
 * 에이전트 수에 따른 가용 joint actions 비율 고려
 
 ![Exploration 전략 개선](https://johayoung227.github.io/assets/images/2025-02-18-paper-review/image2.png)
 
-* 수식 <br>
+* 수식 
 $$εt = tanh(α * √log(|Ut|))$$
-  - |Ut|: 시점 t에서 사용 가능한 joint actions의 수
+
+- |Ut|: 시점 t에서 사용 가능한 joint actions의 수
+
 1. log(|Ut|)
     - joint actions 수가 증가할 때 완만하게 증가
 2. √(제곱근) 사용
@@ -61,11 +65,13 @@ $$εt = tanh(α * √log(|Ut|))$$
 #### 2. Replay Buffer 개선
 
 > Replay Buffer의 주요 구조와 특징
+
 * Replay Buffer란?
     - 강화학습에서 경험을 저장하고 재사용하기 위한 메모리 공간
     - 버퍼 크기 D만큼의 transitions 저장 가능
 
 > 기존 방식의 문제점
+
 * 전체 에피소드 기반 학습의 한계
     - 다양한 길이의 에피소드 처리 어려움
     - 에피소드 간 transition 관계 활용 못함
@@ -74,7 +80,8 @@ $$εt = tanh(α * √log(|Ut|))$$
     - hidden state 초기화 시점 설정 어려움
     - 에피소드 전체를 메모리에 유지해야 하는 부담
 
- > 제안하는 개선 방법
+> 제안하는 개선 방법
+
 * Sequence 기반 학습 도입
     - 고정된 길이 m의 sequences 사용
     - 에피소드 경계와 무관하게 학습 가능
@@ -89,7 +96,9 @@ $$εt = tanh(α * √log(|Ut|))$$
 ![Replay Buffer 개선 구조](https://johayoung227.github.io/assets/images/2025-02-18-paper-review/image1.png)
 
 ![알고리즘](https://johayoung227.github.io/assets/images/2025-02-18-paper-review/image3.png)
+
 > 알고리즘 1
+
 ```pseudo 
 입력: transitions 리스트 D, buffer 크기 D
 출력: 업데이트된 transitions 리스트 D
@@ -102,6 +111,7 @@ $$εt = tanh(α * √log(|Ut|))$$
 
     새로운 transition을 buffer에 추가
 ```
+
 * 알고리즘 1의 특징
   - FIFO(First In First Out) 방식으로 메모리 관리
   - 가장 오래된 데이터부터 제거하여 최신 경험 유지

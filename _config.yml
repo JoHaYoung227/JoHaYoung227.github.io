@@ -14,7 +14,7 @@ repository: "JoHaYoung227/guma.github.io"
 markdown: kramdown
 mathjax: true
 # Custom CSS 적용
-include: ["_pages"]
+include: ["_pages", "assets"]
 
 # Site Author
 author:

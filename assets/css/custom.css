@@ -1,18 +1,18 @@
 /* 글자 크기 줄이기 */
 body {
-    font-size: 14px;
+    font-size: 10px;
   }
   
   /* 사이드바 오른쪽 정렬 */
   .sidebar {
     float: right;
-    width: 250px;
-    margin-right: 20px;
+    width: 150px;
+    margin-right: 5px;
   }
   
   /* 본문 너비 조정 */
   .page {
-    max-width: 1000px;
+    max-width: 1200px;
     padding: 0 40px;
   }
   

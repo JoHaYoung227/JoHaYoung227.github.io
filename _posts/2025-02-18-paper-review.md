@@ -12,15 +12,9 @@ toc_sticky: true
 use_math: true
 date: 2025-02-18
 last_modified_at: 2025-02-18
+layout: post
+mathjax: true
 ---
-
-## 논문 기본 정보
-| 항목 | 내용 |
-|------|------|
-| 제목 | Rethinking Exploration and Experience Exploitation in Value-Based Multi-Agent Reinforcement Learning |
-| 저널 | IEEE |
-| 발표일 | 2025년 1월 17일 |
-| 키워드 | MARL, exploration, value-based methods |
 
 ## 논문 핵심 내용 요약
 

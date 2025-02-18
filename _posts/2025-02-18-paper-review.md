@@ -87,7 +87,8 @@ $εt = tanh(α * √log(|Ut|))$
         - 적절한 recurrent state 초기화
         - experience 간 상관관계 감소
 
-![Replay Buffer 개선 구조](../assets/images/2025-02-18-paper-review/image1.png)
+![Replay Buffer 개선 구조](https://johayoung227.github.io/assets/images/2025-02-18-paper-review/image1.png)
+
 > 알고리즘 1
 ```
 입력: transitions 리스트 D, buffer 크기 D
